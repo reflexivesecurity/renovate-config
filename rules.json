@@ -1,12 +1,15 @@
 {
   "extends": [
-    "config:base",
-    "schedule:earlyMondays"
+    "config:base"
   ],
   "packageRules": [
     {
       "updateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "packageNames": ["boto3"],
+      "extends": ["schedule:earlyMondays"]
     }
   ]
 }
