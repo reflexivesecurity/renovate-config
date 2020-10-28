@@ -14,7 +14,8 @@
     "group:monorepos",
     "group:recommended",
     "helpers:disableTypesNodeMajor"  
-],
+  ],
+  "dependencyDashboard": true,
   "packageRules": [
     {
       "updateTypes": ["minor", "patch", "pin", "digest"],
