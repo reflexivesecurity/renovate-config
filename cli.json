@@ -1,0 +1,31 @@
+{
+  "pip_requirements": {
+    "fileMatch": [
+      "requirements.txt",
+      "requirements-dev.txt"
+    ]
+  },
+  "extends": [
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":prImmediately",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":automergeDisabled",
+    ":ignoreModulesAndTests",
+    ":autodetectPinVersions",
+    ":prHourlyLimitNone",
+    ":prConcurrentLimitNone",
+    "group:monorepos",
+    "group:recommended",
+    "helpers:disableTypesNodeMajor"
+  ],
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
+}
